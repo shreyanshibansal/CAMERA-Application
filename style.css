@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding: 0;
+}
+
+.video-cont{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+video{
+    height:100%;
+    width:100%;
+}
+.action-cont{
+    height: 12rem;
+    width: 5rem;
+    /* background-color: blue; */
+    position: absolute;
+    top: calc( (100vh - 12rem ) / 2);
+    left: calc( 100vw - 10rem );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.action-cont>*{
+    height:5rem;
+    border: 5px solid white ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.record-btn{
+    background-color: red;
+    height: 3rem;
+    width:3rem;
+    border-radius: 50%;
+}
+
+.capture-btn{
+    background-color: white;
+    height: 3rem;
+    width:3rem;
+    border-radius: 50%;
+}
+
+.timer-cont{
+    position: absolute;
+    bottom:10rem;
+    left: 3rem;
+    color: white;
+    z-index: 1;
+}
+
+.timer{
+    display:none
+}
+
+.filter-cont{
+    position: absolute;
+    height: 16rem;
+    width: 5rem;
+    top:calc((100vh - 12rem)/2);
+    left:3rem;
+    background-color: aquamarine;
+     z-index: 1;
+}
+
+.filter{
+    height: 4rem;
+    background-image: url(https://picsum.photos/seed/picsum/200/300);
+    /* background-position: center; */
+    background-size: 100% 100%;
+    background-blend-mode:color-burn ;
+}
+
+.brown{
+    background-color: #ffa50052;
+}
+.orange{
+    background-color: #a52a2a59;
+}
+.pink{
+    background-color: #ffc0cb57;
+}
+.transparent{
+    background-color:transparent;
+}
+
+.filter-layer{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #ffa50052; */
+    position:absolute;
+    top:0;
+    left:0;
+   
+}
+
+.material-icons{
+    color: white;
+    font-size: 3rem;
+}
+
+.gallery{
+    position: absolute;
+    bottom: 5rem;
+    right:5rem;
+     z-index: 1;
+}
+
+.gallery:hover{
+    cursor: pointer;
+}
+
+
+.scale-capture{
+    animation-name: scale-capture;
+    /* animation-iteration-count: 1; */
+    animation-duration: 1s;
+}
+
+@keyframes scale-capture{
+    0%{
+        transform: scale(0.8);
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.scale-record{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes scale-record{
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
